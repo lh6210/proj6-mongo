@@ -42,6 +42,11 @@
     {% for memo in g.memos %}
   <div class="memo">
   <div class="row">
+    {% if loop.index is divisibleby 2 %}
+    <tr class="even">
+    {% else %}
+    <tr class="odd">
+    {% endif %}
   <div class="col-md-2">
     {{ memo.date | humanize }}
   </div>

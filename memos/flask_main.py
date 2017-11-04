@@ -58,7 +58,9 @@ app.secret_key = CONFIG.SECRET_KEY
 
 try: 
     dbclient = MongoClient(MONGO_CLIENT_URL)
+    ## get control of the database, which is dbclient.[CONFIG.DB]
     db = getattr(dbclient, CONFIG.DB)
+    ## get control of the collection; if it doesn't exist, create one
     collection = db.dated
 
 except:
