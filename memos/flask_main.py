@@ -138,10 +138,11 @@ def get_memos():
     """
     records = [ ]
     for record in collection.find( { "type": "dated_memo" } ):
+        ## modify the date field of the record
         record['date'] = arrow.get(record['date']).isoformat()
         del record['_id']
         records.append(record)
-    return records 
+    return sorted(records, key=lambda record: record['date']) 
 
 
 if __name__ == "__main__":
