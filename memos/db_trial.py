@@ -44,19 +44,18 @@ record = { "type": "dated_memo",
            "date":  arrow.utcnow().naive,
            "text": "This is a sample memo"
           }
-
 print("Inserting 1")
 collection.insert(record)
 print("Inserted")
 
-record = { "type": "dated_memo", 
-           "date":  arrow.utcnow().replace(days=+1).naive,
-           "text": "Sample one day later"
-          }
+#record = { "type": "dated_memo", 
+#           "date":  arrow.utcnow().replace(days=+1).naive,
+#           "text": "Sample one day later"
+#          }
 
-print("Inserting 2")
-collection.insert(record)
-print("Inserted")
+#print("Inserting 2")
+#collection.insert(record)
+#print("Inserted")
 
 
 #

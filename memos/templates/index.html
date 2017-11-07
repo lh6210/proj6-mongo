@@ -40,6 +40,7 @@
 
 <h1>Memos</h1>
 
+<form>
 {% if g.memos %}
     {% for memo in g.memos %}
   <div class="memo">
@@ -56,7 +57,10 @@
 {% else %}
   <p>No memos for you. </p>  
 {% endif %}
-
+<div>
+  <button type="submit">Delete</button>
+</div>
+</form>
  
 
 </div> <!-- container -->
