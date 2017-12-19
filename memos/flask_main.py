@@ -89,6 +89,15 @@ def index():
 #     app.logger.debug("Create")
 #     return flask.render_template('create.html')
 
+@app.route('/newMsg', methods = ['POST'])
+def newMsg():
+    dt = request.form['dt'] 
+    msg = request.form['box']
+    return render_template('index.html')
+
+
+
+
 
 @app.errorhandler(404)
 def page_not_found(error):
